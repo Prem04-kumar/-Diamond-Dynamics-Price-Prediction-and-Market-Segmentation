@@ -29,7 +29,9 @@ Deploy predictions using a Streamlit web app
 * K-Means Clustering
 * PCA (Dimensionality Reduction)
 * Streamlit Deployment
-📊 Dataset Information
+
+
+# 📊 Dataset Information
 Property	Value
 Dataset	Diamonds Dataset
 Rows	53,940
