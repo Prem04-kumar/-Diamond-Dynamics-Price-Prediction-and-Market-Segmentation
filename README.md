@@ -46,7 +46,7 @@ price	Price in USD (converted to INR)
 Removed invalid values (0 in x, y, z)
 Handled missing values
 Converted price from USD to INR
-Removed outliers using IQR method
+capped outliers using IQR method
 Checked skewness of numerical features
 ## 📈 Exploratory Data Analysis (EDA)
 Price distribution plots
