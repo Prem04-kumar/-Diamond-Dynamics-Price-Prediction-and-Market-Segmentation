@@ -67,17 +67,18 @@ Selected the most influential features for modeling
 ## 🤖 Regression Models
 The following models were trained and evaluated:
 
-Linear Regression
-Decision Tree Regressor
-Random Forest Regressor
-K-Nearest Neighbors (KNN)
-XGBoost Regressor (Best Model)
-Artificial Neural Network (ANN)
-Evaluation Metrics Used
 
-MAE
-RMSE
-R² Score
+# Linear Regression
+# Decision Tree Regressor
+# Random Forest Regressor
+# K-Nearest Neighbors (KNN)
+# XGBoost Regressor (Best Model)
+# Artificial Neural Network (ANN)
+# Evaluation Metrics Used
+
+* MAE
+* RMSE
+* R² Score
 ## 🧩 Clustering – Market Segmentation
 Algorithm: K-Means
 Data scaled using StandardScaler
