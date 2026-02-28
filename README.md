@@ -1,5 +1,7 @@
 ## Diamond Dynamics – Price Prediction & Market Segmentation
-Python Machine Learning Deep Learning Deployment Status
+
+
+# Python Machine Learning Deep Learning Deployment Status
 
 An end-to-end Machine Learning and Deep Learning project to predict diamond prices and segment diamonds into meaningful market categories.
 The project is deployed using a Streamlit web application.
@@ -17,16 +19,16 @@ Perform market segmentation using K-Means clustering
 Visualize clusters using PCA
 Deploy predictions using a Streamlit web app
 ## 🧠 Skills & Concepts Used
-Data Cleaning & Preprocessing
-Exploratory Data Analysis (EDA)
-Outlier & Skewness Handling
-Feature Engineering
-Feature Selection
-Machine Learning Regression
-Artificial Neural Networks (ANN)
-K-Means Clustering
-PCA (Dimensionality Reduction)
-Streamlit Deployment
+* Data Cleaning & Preprocessing
+* Exploratory Data Analysis (EDA)
+* Outlier & Skewness Handling
+* Feature Engineering
+* Feature Selection
+* Machine Learning Regression
+* Artificial Neural Networks (ANN)
+* K-Means Clustering
+* PCA (Dimensionality Reduction)
+* Streamlit Deployment
 📊 Dataset Information
 Property	Value
 Dataset	Diamonds Dataset
