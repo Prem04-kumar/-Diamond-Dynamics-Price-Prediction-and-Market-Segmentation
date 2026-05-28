@@ -1,151 +1,283 @@
-## Diamond Dynamics – Price Prediction & Market Segmentation
-
-
-# Python Machine Learning Deep Learning Deployment Status
-
-An end-to-end Machine Learning and Deep Learning project to predict diamond prices and segment diamonds into meaningful market categories.
-The project is deployed using a Streamlit web application.
-
+# 💎 Diamond Dynamics: Price Prediction and Market Segmentation
+ 
+![Python](https://img.shields.io/badge/Python-3.8+-blue?style=for-the-badge&logo=python&logoColor=white)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![XGBoost](https://img.shields.io/badge/XGBoost-189FDD?style=for-the-badge&logo=xgboost&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+ 
+---
+ 
 ## 📌 Project Overview
-Diamond pricing depends on several quality attributes such as carat, cut, color, clarity, and dimensions.
-This project solves two key business problems:
-
-Predicting diamond prices accurately
-Segmenting diamonds into market groups for better pricing and inventory decisions
-## 🎯 Objectives
-Build multiple regression models for price prediction
-Build an Artificial Neural Network (ANN) model
-Perform market segmentation using K-Means clustering
-Visualize clusters using PCA
-Deploy predictions using a Streamlit web app
-## 🧠 Skills & Concepts Used
-* Data Cleaning & Preprocessing
-* Exploratory Data Analysis (EDA)
-* Outlier & Skewness Handling
-* Feature Engineering
-* Feature Selection
-* Machine Learning Regression
-* Artificial Neural Networks (ANN)
-* K-Means Clustering
-* PCA (Dimensionality Reduction)
-* Streamlit Deployment
-
-
-# 📊 Dataset Information
-Property	Value
-Dataset	Diamonds Dataset
-Rows	53,940
-Columns	10
-Main Columns
-Column	Description
-carat	Weight of the diamond
-cut	Cut quality (Fair → Ideal)
-color	Color grade (D best → J worst)
-clarity	Inclusion quality
-x, y, z	Dimensions in mm
-price	Price in USD (converted to INR)
-🧹 Data Preprocessing
-Removed invalid values (0 in x, y, z)
-Handled missing values
-Converted price from USD to INR
-capped outliers using IQR method
-Checked skewness of numerical features
-## 📈 Exploratory Data Analysis (EDA)
-Price distribution plots
-Carat vs price relationship
-Price vs cut, color, clarity
-Correlation heatmap
-Scatter plots and boxplots
-## 🧩 Feature Engineering
-Derived new features to improve model performance:
-
-Volume = x × y × z
-Price per Carat
-Dimension Ratio
-Carat Category (Light / Medium / Heavy)
-## 🎯 Feature Selection
-Used Random Forest feature importance
-Selected the most influential features for modeling
-## 🤖 Regression Models
-The following models were trained and evaluated:
-
-
-# Linear Regression
-# Decision Tree Regressor
-# Random Forest Regressor
-# K-Nearest Neighbors (KNN)
-# XGBoost Regressor (Best Model)
-# Artificial Neural Network (ANN)
-# Evaluation Metrics Used
-
-* MAE
-* RMSE
-* R² Score
-## 🧩 Clustering – Market Segmentation
-Algorithm: K-Means
-Data scaled using StandardScaler
-Optimal clusters selected using Elbow Method
-PCA used for 2D visualization
-Cluster Names
-Cluster Name	Description
-Affordable Small Diamonds	Low carat, budget-friendly
-Mid-range Balanced Diamonds	Medium size and price
-Premium Heavy Diamonds	High carat, luxury diamonds
-## 🌐 Streamlit Web Application
-App Features
-Price prediction in INR
-Market segment prediction
-Preset diamond profiles
-Downloadable prediction report
-Clean and interactive UI
-Run the App
+ 
+Diamond pricing depends on multiple factors such as carat, cut, color, clarity, and dimensions.
+Manual price estimation can be difficult and inconsistent due to changing market conditions and quality variations.
+ 
+This project uses **Machine Learning** techniques to:
+ 
+- 🔮 Predict diamond prices accurately
+- 📊 Analyze important pricing features
+- 🧩 Perform market segmentation using clustering techniques
+- 💡 Generate business insights from diamond market trends
+> The project helps automate diamond price prediction and supports **data-driven business decisions** in the jewelry industry.
+ 
+---
+ 
+## 🎯 Business Problem
+ 
+Diamond valuation is a complex process influenced by multiple attributes.
+Traditional pricing methods may lead to inconsistent valuations and difficulty in identifying customer market segments.
+ 
+This project aims to:
+ 
+| Goal | Description |
+|------|-------------|
+| 🎯 Pricing Accuracy | Improve valuations using Machine Learning |
+| ⚙️ Automation | Reduce manual valuation effort |
+| 🧩 Segmentation | Identify market segments for better business strategy |
+| 🔍 Feature Impact | Understand which attributes drive diamond pricing |
+ 
+---
+ 
+## 📂 Dataset Information
+ 
+**Source:** [Kaggle Diamonds Dataset](https://www.kaggle.com/datasets/shivam2503/diamonds)
+ 
+### Dataset Features
+ 
+| Feature | Type | Description |
+|---------|------|-------------|
+| `carat` | Numeric | Weight of the diamond |
+| `cut` | Categorical | Quality of the cut (Fair → Ideal) |
+| `color` | Categorical | Diamond color grading (D → J) |
+| `clarity` | Categorical | Diamond clarity grading (I1 → IF) |
+| `depth` | Numeric | Total depth percentage |
+| `table` | Numeric | Width of top of diamond relative to widest point |
+| `x` | Numeric | Length in mm |
+| `y` | Numeric | Width in mm |
+| `z` | Numeric | Depth in mm |
+| `price` | Numeric | **Target variable** — price in USD |
+ 
+---
+ 
+## 🛠️ Technologies Used
+ 
+| Category | Tools |
+|----------|-------|
+| Language | Python 3.8+ |
+| Data Handling | Pandas, NumPy |
+| Visualization | Matplotlib, Seaborn |
+| Machine Learning | Scikit-learn, XGBoost |
+| Environment | Jupyter Notebook |
+ 
+---
+ 
+## 🔄 Project Workflow
+ 
+```
+Data Collection → Data Cleaning → EDA → Feature Engineering → Model Building → Evaluation → Segmentation
+```
+ 
+### 1️⃣ Data Collection
+- Imported dataset from Kaggle
+- Loaded using Pandas
+### 2️⃣ Data Cleaning
+- Checked and handled null values
+- Removed duplicate records
+- Resolved inconsistent data entries
+### 3️⃣ Exploratory Data Analysis (EDA)
+- Analyzed feature distributions
+- Created correlation heatmaps and distribution plots
+- Identified relationships between variables
+### 4️⃣ Feature Engineering
+- Encoded categorical features (cut, color, clarity)
+- Selected important features using correlation analysis
+- Prepared final training dataset
+### 5️⃣ Model Building
+ 
+| Model | Purpose |
+|-------|---------|
+| Linear Regression | Baseline model |
+| Random Forest Regressor | Improved ensemble-based prediction |
+| XGBoost Regressor | Advanced gradient boosting algorithm |
+ 
+### 6️⃣ Model Evaluation
+ 
+Evaluated models using:
+- **R² Score** — Explained variance
+- **MAE** — Mean Absolute Error
+- **RMSE** — Root Mean Squared Error
+### 7️⃣ Market Segmentation
+- Applied **K-Means Clustering**
+- Grouped diamonds into distinct market segments
+- Analyzed patterns across customer and business dimensions
+---
+ 
+## 📊 Exploratory Data Analysis
+ 
+Analyses performed:
+ 
+- 📈 Correlation Heatmap
+- 💰 Price Distribution Analysis
+- 🔑 Feature Importance Analysis
+- 💎 Diamond Quality Analysis
+- 🗺️ Market Segment Visualization
+---
+ 
+## 📈 Model Performance
+ 
+| Metric | Value |
+|--------|-------|
+| ✅ R² Score | `0.94` |
+| 📉 MAE | `512` |
+| 📉 RMSE | `730` |
+ 
+> **Best Model:** XGBoost Regressor with R² Score of **0.94**
+ 
+---
+ 
+## 📌 Market Segmentation
+ 
+**K-Means Clustering** was used to identify different diamond market segments based on:
+ 
+- Price
+- Carat
+- Cut quality
+- Clarity
+- Physical dimensions (x, y, z)
+### Segmentation Benefits
+ 
+| Benefit | Description |
+|---------|-------------|
+| 🎯 Customer Targeting | Identify and reach the right customer segments |
+| 📊 Market Analysis | Understand trends across different price tiers |
+| 📦 Inventory Planning | Optimize stock based on market demand |
+| 💼 Business Decisions | Data-driven strategies for pricing and promotion |
+ 
+---
+ 
+## 📷 Output Screenshots
+ 
+### Correlation Heatmap
+![Heatmap](images/heatmap.png)
+ 
+### Feature Importance
+![Feature Importance](images/feature_importance.png)
+ 
+### Price Prediction Output
+![Prediction](images/prediction.png)
+ 
+### Market Segmentation
+![Segmentation](images/segmentation.png)
+ 
+> 📁 Place all screenshots in the `images/` folder.
+ 
+---
+ 
 ## 📁 Project Structure
-
-diamond-dynamics-ml/
+ 
+```
+Diamond-Dynamics/
 │
-├── data/
-│   └── diamonds.csv
-│
-├── models/
-│   ├── model.pkl
-│   ├── encoder.pkl
-│   ├── cluster_model.pkl
-│   ├── scaler.pkl
-│   └── cluster_names.json
-│
-├── notebook/
-│   └── diamond.ipynb
-│
-└── diamond.py
-## 🚀 Real-World Applications
-
-Dynamic pricing for diamond retailers
-
-Inventory segmentation
-
-Luxury goods recommendation systems
-
-Customer targeting and personalization
-
-## 🛠 Tech Stack
-
-Python
-
-Pandas, NumPy
-
-Scikit-learn
-
-XGBoost
-
-TensorFlow / Keras
-
-Matplotlib, Seaborn
-
-Streamlit
-
-## 👤 Author
-
-Prem Kumar.A
-
-"C:\Users\A Prem kumar\AppData\Local\Programs\Python\Python310\python.exe" -m streamlit run "C:\VSCODE\diamond.py"
+├── data/                             # Raw and processed datasets
+├── notebooks/                        # Jupyter notebooks
+├── models/                           # Saved ML models
+├── images/                           # Output screenshots
+├── app.py                            # Main application file
+├── requirements.txt                  # Python dependencies
+├── README.md                         # Project documentation
+└── Diamond_Price_Prediction.ipynb    # Main notebook
+```
+ 
+---
+ 
+## ⚙️ Installation
+ 
+### 1. Clone the Repository
+ 
+```bash
+git clone https://github.com/Prem04-kumar/-Diamond-Dynamics-Price-Prediction-and-Market-Segmentation.git
+```
+ 
+### 2. Navigate to the Project Folder
+ 
+```bash
+cd -Diamond-Dynamics-Price-Prediction-and-Market-Segmentation
+```
+ 
+### 3. Install Dependencies
+ 
+```bash
+pip install -r requirements.txt
+```
+ 
+---
+ 
+## ▶️ Run the Project
+ 
+### Run Jupyter Notebook
+ 
+```bash
+jupyter notebook
+```
+ 
+### Run Python Application
+ 
+```bash
+python app.py
+```
+ 
+---
+ 
+## 🌐 Future Enhancements
+ 
+- [ ] 🚀 Deploy using **Streamlit**
+- [ ] 🧠 Add **Deep Learning** models
+- [ ] 🌍 Build a **Real-time diamond price prediction API**
+- [ ] 📊 Create an **Advanced business analytics dashboard**
+- [ ] 🔬 Improve clustering with DBSCAN or Hierarchical Clustering
+- [ ] 🤝 Add a **Diamond recommendation system**
+---
+ 
+## 📚 Key Learnings
+ 
+Through this project, I gained hands-on experience in:
+ 
+- ✅ Data Cleaning and Preprocessing
+- ✅ Exploratory Data Analysis (EDA)
+- ✅ Feature Engineering
+- ✅ Regression Modeling (Linear, Random Forest, XGBoost)
+- ✅ K-Means Clustering
+- ✅ Model Evaluation Metrics
+- ✅ Data Visualization
+- ✅ Business Insight Generation
+---
+ 
+## 👨‍💻 Author
+ 
+**Prem Kumar A**
+ 
+[![GitHub](https://img.shields.io/badge/GitHub-Prem04--kumar-181717?style=for-the-badge&logo=github)](https://github.com/Prem04-kumar)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/)
+ 
+---
+ 
+## ⭐ Conclusion
+ 
+This project demonstrates the application of **Machine Learning** and **Data Analytics** for solving real-world business problems in diamond pricing and market segmentation.
+ 
+The project combines:
+ 
+| Pillar | Description |
+|--------|-------------|
+| 🔮 Predictive Analytics | Accurate price forecasting using ML models |
+| 🧩 Customer Segmentation | K-Means clustering for market grouping |
+| 💼 Business Intelligence | Actionable insights for decision-making |
+| 📊 Data Visualization | Clear and interpretable visual outputs |
+ 
+to provide **actionable insights** for better decision-making in the diamond industry.
+ 
+---
+ 
+> ⭐ **If you found this project helpful, please give it a star on GitHub!**
 
