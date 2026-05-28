@@ -156,24 +156,6 @@ Analyses performed:
  
 ---
  
-## 📷 Output Screenshots
- 
-### Correlation Heatmap
-![Heatmap](images/heatmap.png)
- 
-### Feature Importance
-![Feature Importance](images/feature_importance.png)
- 
-### Price Prediction Output
-![Prediction](images/prediction.png)
- 
-### Market Segmentation
-![Segmentation](images/segmentation.png)
- 
-> 📁 Place all screenshots in the `images/` folder.
- 
----
- 
 ## 📁 Project Structure
  
 ```
@@ -182,7 +164,6 @@ Diamond-Dynamics/
 ├── data/                             # Raw and processed datasets
 ├── notebooks/                        # Jupyter notebooks
 ├── models/                           # Saved ML models
-├── images/                           # Output screenshots
 ├── app.py                            # Main application file
 ├── requirements.txt                  # Python dependencies
 ├── README.md                         # Project documentation
