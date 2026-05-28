@@ -199,13 +199,13 @@ pip install -r requirements.txt
 ### Run Jupyter Notebook
  
 ```bash
-jupyter notebook
+jupyter notebook diamond.ipynb
 ```
  
 ### Run Python Application
  
 ```bash
-python app.py
+python diamond.py
 ```
  
 ---
